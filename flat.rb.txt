@@ -1,0 +1,7 @@
+
+#sv svadwalas@gmail.com
+def flat_array(array)
+  array.each_with_object([]) do |ele,flatunit|
+    flatunit.push *(ele.is_a?(Array) ? flat_array(ele) : ele)
+  end
+end
